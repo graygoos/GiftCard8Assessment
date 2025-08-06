@@ -15,3 +15,7 @@ struct GiftCard8AssessmentApp: App {
         }
     }
 }
+
+#Preview {
+    ContentView()
+}
