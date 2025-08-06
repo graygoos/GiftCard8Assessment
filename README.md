@@ -102,6 +102,6 @@ This project is available under the MIT License. See the LICENSE file for more i
 
 ## Contact
 
-Your Name - your.email@example.com
+Femi Aliu - femialiu713@gmail.com
 
-Project Link: [https://github.com/YOUR_USERNAME/GiftCard8Assessment](https://github.com/YOUR_USERNAME/GiftCard8Assessment)
+Project Link: [https://github.com/graygoos/GiftCard8Assessment](https://github.com/YOUR_USERNAME/GiftCard8Assessment)
