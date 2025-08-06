@@ -1,0 +1,49 @@
+# Ignore Xcode project user data
+xcuserdata/
+
+# Ignore build products
+build/
+DerivedData/
+
+# Ignore various personal settings and project settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace/xcuserdata
+
+# Ignore environment variable files
+.env
+.env.*
+*.env
+
+# Swift Package Manager
+.build/
+.package.resolved
+
+# CocoaPods
+Pods/
+
+# Carthage
+Carthage/Build/
+Carthage/Checkouts/
+Carthage/Pods/
+
+# Other common files
+*.xcscmblueprint
+
+# Secret management
+Secrets.swift
+secrets.sh
+secrets.json
+secrets.env
+
+# Log files
+.log
+
+# Playground files
+.playground
