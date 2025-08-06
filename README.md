@@ -1,6 +1,20 @@
 # GiftCard8Assessment - iOS News App
 
-A modern iOS news application built with SwiftUI that provides location-based news, search functionality, and offline caching capabilities.
+<div align="center">
+  <img src="docs/images/app-icon.png" alt="App Icon" width="120" height="120">
+  
+  <p>A modern iOS news application built with SwiftUI that provides location-based news, search functionality, and offline caching capabilities.</p>
+  
+  <img src="docs/gifs/app-demo.gif" alt="App Demo" width="300">
+</div>
+
+## Screenshots
+
+<div align="center">
+  <img src="docs/screenshots/home-screen.png" alt="Home Screen" width="250">
+  <img src="docs/screenshots/search-screen.png" alt="Search Screen" width="250">
+  <img src="docs/screenshots/location-screen.png" alt="Location Screen" width="250">
+</div>
 
 ## Features
 
