@@ -49,8 +49,8 @@ GiftCard8Assessment/
 
 ## Requirements
 
-- iOS 15.0+
-- Xcode 14.0+
+- iOS 17.0+
+- Xcode 15.0+
 - Swift 5.7+
 
 ## Setup
