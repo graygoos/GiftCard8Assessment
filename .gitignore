@@ -48,3 +48,6 @@ secrets.env
 
 # Playground files
 .playground
+
+# VS Code settings
+.vscode/

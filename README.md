@@ -5,7 +5,7 @@
   
   <p>A modern iOS news application built with SwiftUI that provides location-based news, search functionality, and offline caching capabilities.</p>
   
-  <img src="docs/gifs/app-demo.gif" alt="App Demo" width="300">
+  <img src="docs/images/app-demo.gif" alt="App Demo" width="300">
 </div>
 
 ## Screenshots
@@ -61,19 +61,7 @@ git clone https://github.com/YOUR_USERNAME/GiftCard8Assessment.git
 cd GiftCard8Assessment
 ```
 
-### 2. Quick Setup (Recommended)
-```bash
-# Run the automated setup script
-./setup.sh
-```
-This script will:
-- Create the `Secrets.swift` file from template
-- Guide you through the API key setup process
-- Optionally open the project in Xcode
-
-### Manual Setup (Alternative)
-
-### 3. Get GNews API Key
+### 2. Get GNews API Key
 
 This app uses [GNews API](https://gnews.io/) for fetching news articles. Follow these steps to get your API key:
 
@@ -85,25 +73,30 @@ This app uses [GNews API](https://gnews.io/) for fetching news articles. Follow 
    - Rate limit: 10 requests per minute
    - Access to top headlines and search endpoints
 
-### 4. Configure API Key
+### 3. Configure API Key
 
 **⚠️ Important Security Note**: Never commit API keys to version control!
 
-1. **Update Secrets.swift**: Replace the placeholder in `GiftCard8Assessment/Config/Secrets.swift`:
+1. **Create Secrets.swift**: Copy the template file and add your API key:
+   ```bash
+   cp GiftCard8Assessment/Config/Secrets.swift.template GiftCard8Assessment/Config/Secrets.swift
+   ```
+
+2. **Update Secrets.swift**: Replace the placeholder in `GiftCard8Assessment/Config/Secrets.swift`:
    ```swift
    struct Secrets {
        static let newsAPIKey = "YOUR_ACTUAL_API_KEY_HERE"
    }
    ```
 
-2. **Alternative: Environment Variables** (Recommended for production):
+3. **Alternative: Environment Variables** (Recommended for production):
    ```swift
    struct Secrets {
        static let newsAPIKey = ProcessInfo.processInfo.environment["GNEWS_API_KEY"] ?? ""
    }
    ```
 
-### 5. API Endpoints Used
+### 4. API Endpoints Used
 
 The app uses these GNews API endpoints:
 
@@ -112,7 +105,7 @@ The app uses these GNews API endpoints:
 - **Country News**: `/top-headlines?token={API_KEY}&lang=en&country={COUNTRY_CODE}`
 - **Search**: `/search?token={API_KEY}&lang=en&q={QUERY}`
 
-### 6. Supported Countries
+### 5. Supported Countries
 
 GNews supports these country codes for location-based news:
 - `us` - United States
@@ -125,12 +118,12 @@ GNews supports these country codes for location-based news:
 - `jp` - Japan
 - And many more...
 
-### 7. Open Project in Xcode
+### 6. Open Project in Xcode
 ```bash
 open GiftCard8Assessment.xcodeproj
 ```
 
-### 8. Build and Run
+### 7. Build and Run
 - Select your target device/simulator
 - Press `Cmd + R` to build and run
 
