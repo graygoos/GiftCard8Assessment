@@ -16,7 +16,7 @@ class LocationViewModel: ObservableObject {
     init() {
         setupLocationObserver()
         // Try device region as fallback immediately
-        if let code = Locale.current.regionCode?.lowercased() {
+        if let code = Locale.current.region?.identifier.lowercased() {
             self.countryCode = code
             self.locationStatus = "Using device region: \(code.uppercased())"
             // Load news immediately with device region
@@ -49,7 +49,7 @@ class LocationViewModel: ObservableObject {
             .sink { [weak self] error in
                 if error != nil {
                     // Fall back to device region
-                    if let code = Locale.current.regionCode?.lowercased() {
+                    if let code = Locale.current.region?.identifier.lowercased() {
                         self?.countryCode = code
                         self?.locationStatus = "Using device region: \(code.uppercased())"
                         Task {

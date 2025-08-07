@@ -26,7 +26,7 @@ struct LocationView: View {
                     .padding(.horizontal)
                     .padding(.top, 8)
                     
-                    if let country = viewModel.countryCode, !viewModel.articles.isEmpty {
+                    if let _ = viewModel.countryCode, !viewModel.articles.isEmpty {
                         HStack {
                             Text("Local News • \(viewModel.topic.capitalized)")
                                 .font(.caption)

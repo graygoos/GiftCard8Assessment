@@ -11,7 +11,7 @@ class SearchViewModel: ObservableObject {
     init() {
         // Use device region setting for country code (no permission required)
         // Preferred iOS approach: Use CoreLocation for actual location, but that requires user permission.
-        self.countryCode = Locale.current.regionCode?.lowercased()
+        self.countryCode = Locale.current.region?.identifier.lowercased()
     }
     
     func searchNews() async {
