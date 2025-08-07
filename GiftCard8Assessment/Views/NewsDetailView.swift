@@ -77,7 +77,7 @@ struct NewsDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(.hidden, for: .tabBar)
         .sheet(isPresented: $showingWebView) {
-            NavigationView {
+            NavigationStack {
                 ZStack {
                     // Background color
                     Color(.systemBackground)
@@ -144,7 +144,7 @@ struct NewsDetailView: View {
 }
 
 #Preview {
-    NavigationView {
+    NavigationStack {
         NewsDetailView(article: News.sampleArticle)
     }
 }

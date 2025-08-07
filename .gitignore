@@ -38,6 +38,7 @@ Carthage/Pods/
 
 # Secret management
 Secrets.swift
+!Secrets.swift.template
 secrets.sh
 secrets.json
 secrets.env
