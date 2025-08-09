@@ -48,7 +48,7 @@ struct HomeView: View {
                             .font(.headline)
                         Text("Getting the latest headlines...")
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.secondary)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(Color(.systemGroupedBackground))
@@ -58,13 +58,13 @@ struct HomeView: View {
                     VStack(spacing: 16) {
                         Image(systemName: "wifi.exclamationmark")
                             .font(.largeTitle)
-                            .foregroundColor(.red)
+                            .foregroundStyle(.red)
                         Text("Unable to load news")
                             .font(.headline)
                         Text(error)
                             .font(.body)
                             .multilineTextAlignment(.center)
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.secondary)
                         
                         Button("Try Again") {
                             Task { await viewModel.fetchNews() }

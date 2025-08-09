@@ -47,10 +47,10 @@ struct LocationView: View {
                     // Primary status line with location icon and status text
                     HStack {
                         Image(systemName: "location.fill")
-                            .foregroundColor(.blue)
+                            .foregroundStyle(.blue)
                         Text(viewModel.locationStatus)
                             .font(.subheadline)
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.secondary)
                         Spacer()
                     }
                     .padding(.horizontal)
@@ -61,12 +61,12 @@ struct LocationView: View {
                         HStack {
                             Text("Local News • \(viewModel.topic.capitalized)")
                                 .font(.caption)
-                                .foregroundColor(.blue)
+                                .foregroundStyle(.blue)
                                 .fontWeight(.medium)
                             Spacer()
                             Text("\(viewModel.articles.count) articles")
                                 .font(.caption2)
-                                .foregroundColor(.gray)
+                                .foregroundStyle(.gray)
                         }
                         .padding(.horizontal)
                     }
@@ -85,7 +85,7 @@ struct LocationView: View {
                                 .font(.headline)
                             Text("Finding news in your region...")
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(Color(.systemGroupedBackground))
@@ -95,13 +95,13 @@ struct LocationView: View {
                         VStack(spacing: 16) {
                             Image(systemName: "exclamationmark.triangle")
                                 .font(.largeTitle)
-                                .foregroundColor(.orange)
+                                .foregroundStyle(.orange)
                             Text("Unable to load local news")
                                 .font(.headline)
                             Text(error)
                                 .font(.body)
                                 .multilineTextAlignment(.center)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                             
                             Button("Try Again") {
                                 viewModel.requestLocationBasedNews()
@@ -117,13 +117,13 @@ struct LocationView: View {
                         VStack(spacing: 16) {
                             Image(systemName: "newspaper")
                                 .font(.largeTitle)
-                                .foregroundColor(.gray)
+                                .foregroundStyle(.gray)
                             Text("No local news available")
                                 .font(.headline)
                             if let country = viewModel.countryCode {
                                 Text("No news found for \(country.uppercased())")
                                     .font(.body)
-                                    .foregroundColor(.secondary)
+                                    .foregroundStyle(.secondary)
                             }
                             
                             Button("Refresh") {

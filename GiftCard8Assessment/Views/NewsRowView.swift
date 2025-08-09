@@ -62,7 +62,7 @@ struct NewsRowView: View {
                     .frame(width: 80, height: 80)
                     .overlay(
                         Image(systemName: "photo")
-                            .foregroundColor(.gray)
+                            .foregroundStyle(.gray)
                     )
             }
             
@@ -79,7 +79,7 @@ struct NewsRowView: View {
                 Text(article.summary)
                     .font(.subheadline)
                     .lineLimit(2)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
                     .accessibilityLabel("Summary: \(article.summary)")
                 
                 // Metadata row with source and publication date
@@ -87,7 +87,7 @@ struct NewsRowView: View {
                     // News source with visual distinction
                     Text(article.source)
                         .font(.caption)
-                        .foregroundColor(.blue)
+                        .foregroundStyle(.blue)
                         .accessibilityLabel("Source: \(article.source)")
                     
                     Spacer()
@@ -95,7 +95,7 @@ struct NewsRowView: View {
                     // Relative publication date for better user context
                     Text(article.publishedAt.formatted(.relative(presentation: .named)))
                         .font(.caption2)
-                        .foregroundColor(.gray)
+                        .foregroundStyle(.gray)
                         .accessibilityLabel("Published: \(article.publishedAt.formatted(.relative(presentation: .named)))")
                 }
             }

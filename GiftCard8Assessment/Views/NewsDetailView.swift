@@ -69,14 +69,14 @@ struct NewsDetailView: View {
                     HStack {
                         Text(article.source)
                             .font(.subheadline)
-                            .foregroundColor(.blue)
+                            .foregroundStyle(.blue)
                             .fontWeight(.medium)
                         
                         Spacer()
                         
                         Text(article.publishedAt.formatted(date: .abbreviated, time: .shortened))
                             .font(.caption)
-                            .foregroundColor(.secondary)
+                            .foregroundStyle(.secondary)
                     }
                     .accessibilityElement(children: .combine)
                     .accessibilityLabel("Source: \(article.source), Published: \(article.publishedAt.formatted(date: .abbreviated, time: .shortened))")
@@ -98,7 +98,7 @@ struct NewsDetailView: View {
                             Text("Read Full Article")
                         }
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundStyle(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
@@ -130,12 +130,12 @@ struct NewsDetailView: View {
                         VStack(spacing: 16) {
                             Image(systemName: "exclamationmark.triangle")
                                 .font(.largeTitle)
-                                .foregroundColor(.orange)
+                                .foregroundStyle(.orange)
                             Text("Unable to load article")
                                 .font(.headline)
                             Text("The article URL is invalid")
                                 .font(.body)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                     }
@@ -147,7 +147,7 @@ struct NewsDetailView: View {
                                 .scaleEffect(1.2)
                             Text("Loading article...")
                                 .font(.headline)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(Color(.systemBackground))

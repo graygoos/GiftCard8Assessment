@@ -84,10 +84,10 @@ struct CachedAsyncImage: View {
                         VStack(spacing: 8) {
                             Image(systemName: "photo")
                                 .font(.title2)
-                                .foregroundColor(.gray)
+                                .foregroundStyle(.gray)
                             Text("Image unavailable")
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                         }
                     )
                     .frame(height: 200)

@@ -56,7 +56,7 @@ struct SearchView: View {
                         // Search text field with magnifying glass icon
                         HStack {
                             Image(systemName: "magnifyingglass")
-                                .foregroundColor(.gray)
+                                .foregroundStyle(.gray)
                             TextField("Search headlines...", text: $searchText)
                                 .focused($isSearchFocused)
                                 .onSubmit {
@@ -84,7 +84,7 @@ struct SearchView: View {
                         HStack {
                             Text("Local results prioritized for \(countryCode.uppercased())")
                                 .font(.caption)
-                                .foregroundColor(.blue)
+                                .foregroundStyle(.blue)
                             Spacer()
                         }
                         .padding(.horizontal)
@@ -100,12 +100,12 @@ struct SearchView: View {
                         VStack(spacing: 16) {
                             Image(systemName: "magnifyingglass")
                                 .font(.largeTitle)
-                                .foregroundColor(.gray)
+                                .foregroundStyle(.gray)
                             Text("Search News")
                                 .font(.headline)
                             Text("Enter keywords to search for news articles")
                                 .font(.body)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                                 .multilineTextAlignment(.center)
                         }
                         .padding()
@@ -121,7 +121,7 @@ struct SearchView: View {
                                 .font(.headline)
                             Text("Finding articles matching '\(searchText)'")
                                 .font(.caption)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                         }
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
                         .background(Color(.systemGroupedBackground))
@@ -131,13 +131,13 @@ struct SearchView: View {
                         VStack(spacing: 16) {
                             Image(systemName: "exclamationmark.triangle")
                                 .font(.largeTitle)
-                                .foregroundColor(.orange)
+                                .foregroundStyle(.orange)
                             Text("Search failed")
                                 .font(.headline)
                             Text(error)
                                 .font(.body)
                                 .multilineTextAlignment(.center)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                             
                             Button("Try Again") {
                                 performSearch()
@@ -153,12 +153,12 @@ struct SearchView: View {
                         VStack(spacing: 16) {
                             Image(systemName: "doc.text.magnifyingglass")
                                 .font(.largeTitle)
-                                .foregroundColor(.gray)
+                                .foregroundStyle(.gray)
                             Text("No results found")
                                 .font(.headline)
                             Text("No articles found for '\(searchText)'")
                                 .font(.body)
-                                .foregroundColor(.secondary)
+                                .foregroundStyle(.secondary)
                             
                             Button("Try different keywords") {
                                 searchText = ""
@@ -177,7 +177,7 @@ struct SearchView: View {
                             HStack {
                                 Text("\(viewModel.articles.count) results for '\(searchText)'")
                                     .font(.caption)
-                                    .foregroundColor(.secondary)
+                                    .foregroundStyle(.secondary)
                                 Spacer()
                             }
                             .padding(.horizontal)
